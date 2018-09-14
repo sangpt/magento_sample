@@ -30,7 +30,7 @@
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="update_url" xsi:type="url" path="mui/index/render"/>
+                    <item name="update_url" xsi:type="url" path="mui/index/render" />
                 </item>
             </argument>
         </argument>
@@ -84,7 +84,8 @@
                     <item name="childDefaults" xsi:type="array">
                         <item name="provider" xsi:type="string">multivendor_vendor_listing.multivendor_vendor_listing.listing_top.listing_filters</item>
                         <item name="imports" xsi:type="array">
-                            <item name="visible" xsi:type="string">multivendor_vendor_listing.multivendor_vendor_listing.multivendor_vendor_columns.${ $.index }:visible</item>
+                            <item name="visible" xsi:type="string">multivendor_vendor_listing.multivendor_vendor_listing.multivendor_vendor_columns.${
+                                $.index }:visible</item>
                         </item>
                     </item>
                 </item>
@@ -115,7 +116,7 @@
                     <item name="enabled" xsi:type="boolean">true</item>
                     <item name="indexField" xsi:type="string">vendor_id</item>
                     <item name="clientConfig" xsi:type="array">
-                        <item name="saveUrl" xsi:type="url" path="multivendor/vendor/inlineEdit"/>
+                        <item name="saveUrl" xsi:type="url" path="multivendor/vendor/inlineEdit" />
                         <item name="validateBeforeSave" xsi:type="boolean">false</item>MySQL - oscmagestore@localhost
                     </item>
                 </item>
@@ -181,6 +182,18 @@
                 </item>
             </argument>
         </column>
+
+        <actionsColumn name="actions" class="Magestore\Multivendor\Ui\Component\Listing\Column\VendorActions">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="resizeEnabled" xsi:type="boolean">false</item>
+                    <item name="resizeDefaultWidth" xsi:type="string">107</item>
+                    <item name="indexField" xsi:type="string">rate_id</item>
+                </item>
+                <item name="vendorUrlPathEdit" xsi:type="string">multivendoradmin/vendor/edit</item>
+                <item name="vendorUrlPathDelete" xsi:type="string">multivendoradmin/vendor/delete</item>
+            </argument>
+        </actionsColumn>
     </columns>
 
     <container name="sticky">

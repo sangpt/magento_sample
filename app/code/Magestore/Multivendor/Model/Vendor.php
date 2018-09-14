@@ -17,7 +17,7 @@ class Vendor extends \Magento\Framework\Model\AbstractModel
         \Magento\Framework\Registry $registry,
         \Magestore\Multivendor\Model\ResourceModel\Vendor $resource,
         \Magestore\Multivendor\Model\ResourceModel\Vendor\Collection
-        $resourceCollction
+        $resourceCollection
     )
     {
         parent::__construct(

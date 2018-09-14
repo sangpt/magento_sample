@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor" />
+
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Magestore_Multivendor::vendor</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magestore\Multivendor\Block\Adminhtml\Vendor\Edit" name="multivendoradmin_vendor_edit" />
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Magestore\Multivendor\Block\Adminhtml\Vendor\Edit\Tabs" name="multivendoradmin_vendor_edit_tabs" />
+        </referenceContainer>
+    </body>
+</page>
